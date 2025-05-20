@@ -15,7 +15,7 @@
                 <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
             <div class="header-down">
-                <div class="logo"><i class="fa-solid fa-suitcase-medical"></i> Centura Health</div>
+                <div class="logo"><img src="logo.png" alt=""></div>
                 <span class="toggle-menu" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
                 <ul>
                     <li class="bolds"  onclick="hideMenu()">Care & Health</li>
@@ -26,24 +26,26 @@
                 </ul>
             </div>
         </div>
-        <div class="body">
+        <div class="hero-section">
            <div class="hero-content">
-            <div class="hero-upper">
+            <div class="rap">
+                <div class="hero-upper">
              <h2>Every community,every neighborhood,every life - whole and healthy.</h2>
              <p>Centura Health is the larget health care ecosystem across Colorado and western Kansas on a mission to support you own health.</p>
             </div>
+            </div>
             <div class="hero-down">
-             <div class="hero-down-deader">
+             <div class="hero-down-header">
                 <ul class="hero">
-                    <li class="bg-white"><button>Providers</button></li>
-                    <li><button>Locations</button></li>
-                    <li><button>Care & Health </button></li>
+                    <li class="bg-white" id="provider"><button>Providers</button></li>
+                    <li id="location"><button>Locations</button></li>
+                    <li id="health"><button>Care & Health </button></li>
                 </ul>
              </div>
              <div class="hero-down-content">
                  <div class="hero-down-content01">
-                    <div class="input01"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Provider Name,Speciality or practice"></div>
-              <div class="input01"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Location"></div>
+                    <div class="input01" id="input-search"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Provider Name,Speciality or practice"></div>
+              <div class="input01" id="input-location"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Location"></div>
               <div class="Search-btn"><Button>Search</Button></div>
             </div>
             <div class="current-location"><div class="empty"></div><div class="btn"><button>Use current location</button></div></div>
@@ -98,4 +100,67 @@ function hideMenu(){
     navbar.classList.remove('active');
      menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>'
 }
+const inputt=document.querySelector("#input-search")
+const locations=document.querySelector("#input-location")
+const button=document.querySelector(".hero button")
+const providerButton=document.querySelector("#provider button");
+const locationsButton = document.querySelector("#location button"); 
+const healthButton = document.querySelector("#health button");     
+
+
+if (locationsButton) {
+    locationsButton.addEventListener("click", function() {
+        document.querySelectorAll(".hero button").forEach(btn => {
+            btn.style.backgroundColor = "transparent";            btn.style.color = "#fff"; 
+            btn.parentElement.classList.remove('bg-white');
+        });
+
+        locationsButton.style.backgroundColor = "white";
+        inputt.style.display = "none";
+        locations.style.width='80%';
+        locationsButton.style.color = "rgb(30, 141, 214)";
+        locationsButton.parentElement.classList.add('bg-white'); // Re-add if you want to use the class
+    });
+} else {
+    console.error("Error: Element with ID 'location' or its child button not found.");
+}
+
+if (healthButton) {
+    healthButton.addEventListener("click", function() {
+        document.querySelectorAll(".hero button").forEach(btn => {
+            btn.style.backgroundColor = "transparent";
+            btn.style.color = "#fff";
+            btn.parentElement.classList.remove('bg-white');
+        });
+
+        healthButton.style.backgroundColor = "white";
+        inputt.style.display = "block";
+        locations.style.width='40%';
+
+        healthButton.style.color = "rgb(30, 141, 214)"; // Example color
+        healthButton.parentElement.classList.add('bg-white');
+    });
+} else {
+    console.error("Error: Element with ID 'health' or its child button not found.");
+}
+if (providerButton) {
+    providerButton.addEventListener("click", function() {
+        document.querySelectorAll(".hero button").forEach(btn => {
+            btn.style.backgroundColor = "transparent";            btn.style.color = "#fff"; 
+            btn.parentElement.classList.remove('bg-white');
+        });
+
+        providerButton.style.backgroundColor = "white";
+        inputt.style.display = "block";
+        locations.style.width='40%';
+        providerButton.style.color = "rgb(30, 141, 214)";
+        providerButton.parentElement.classList.add('bg-white'); 
+
+       });
+} else {
+    console.error("Error: Element with ID 'health' or its child button not found.");
+}
+
+
+
 </script>

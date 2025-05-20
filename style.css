@@ -11,12 +11,17 @@ main {
 .header {
   width: 100%;
   padding: 20px;
+  background-color: #faf8f6;
 }
 .nav-upper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
+  padding-right: 10px;
+}
+.logo img{
+  width:50%
 }
 .icon {
   width: 35px;
@@ -29,8 +34,10 @@ main {
 }
 .icon i {
   color: aliceblue;
+  cursor: pointer;
 }
 .header-down {
+  height: 74px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,44 +49,55 @@ main {
 .logo {
   font-size: 40px;
   font-weight: 700;
+  cursor: pointer;
 }
 .toggle-menu {
   font-size: 18px;
   display: none;
+  color: #57565c;
+  justify-content: space-between;
 }
 ul {
+  width: 60%;
   display: flex;
   gap: 25px;
+  align-items: center;
   list-style: none;
 }
 li {
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
+  color: #57565c;
+  font-weight: 700;
+
 }
 ul .bolds {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 900;
 }
-.body {
+.hero-section {
   width: 100%;
-  background-image: url(bg.png);
+  background-image: url(bg1.png);
 }
 
 .hero-content {
   width: 100%;
-  padding: 60px 50px;
+  padding: 100px 60px 60px 60px;
+}
+.rap{
+  width: 100%;
 }
 .hero-content .hero-upper {
-  width: 50%;
+  width: 53%;
   background: linear-gradient(to right, #eeeae3 3%, #ffffff);
 
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
 }
 .hero-upper h2 {
-  color: #007fd2;
-  font-size: 50px;
+  color: #0278c6;
+  font-size: 42px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .hero-upper p {
   color: rgb(98, 96, 99);
@@ -90,7 +108,7 @@ ul .bolds {
   background-color: #fff;
   color: #fff;
 }
-.hero-down-deader {
+.hero-down-header {
   width: 100%;
   background-color: #56555b;
   margin-bottom: 10px;
@@ -107,6 +125,7 @@ ul .bolds {
   border: none;
   font-weight: 700;
   font-size: 16px;
+  cursor: pointer;
 }
 .hero .bg-white button {
   background-color: #fff;
@@ -146,6 +165,10 @@ ul .bolds {
   width: 100%;
   border-bottom: 1px solid #000;
 }
+input:focus-visible{
+  border-bottom: 1px solid #000;
+outline: none;
+}
 .Search-btn {
   width: 20%;
 }
@@ -172,7 +195,6 @@ ul .bolds {
 }
 .current-location button {
   border: none;
-  /* padding: 5px 5px; */
   border-bottom: 2px solid rgb(55, 166, 240);
   font-size: 16px;
   background-color: transparent;
@@ -182,7 +204,7 @@ ul .bolds {
 }
 .description {
   width: 100%;
-  padding: 60px 50px 20px 50px;
+  padding: 70px 50px 20px 50px;
   background-color: rgb(247, 246, 245);
   display: flex;
 }
