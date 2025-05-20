@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div class="nav-upper">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="header-down">
+                <div class="logo"><i class="fa-solid fa-suitcase-medical"></i> Centura Health</div>
+                <span class="toggle-menu" onclick="showMenu()"><i class="fa-solid fa-bars"></i></span>
+                <ul>
+                    <li class="bolds"  onclick="hideMenu()">Care & Health</li>
+                    <li class="bolds" onclick="hideMenu()">Find A Provider</li>
+                    <li class="bolds" onclick="hideMenu()">Location</li>
+                    <li onclick="hideMenu()">Patients & Families</li>
+                    <li onclick="hideMenu()">Classes & Events</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+           <div class="hero-content">
+            <div class="hero-upper">
+             <h2>Every community,every neighborhood,every life - whole and healthy.</h2>
+             <p>Centura Health is the larget health care ecosystem across Colorado and western Kansas on a mission to support you own health.</p>
+            </div>
+            <div class="hero-down">
+             <div class="hero-down-deader">
+                <ul class="hero">
+                    <li class="bg-white"><button>Providers</button></li>
+                    <li><button>Locations</button></li>
+                    <li><button>Care & Health </button></li>
+                </ul>
+             </div>
+             <div class="hero-down-content">
+                 <div class="hero-down-content01">
+                    <div class="input01"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Provider Name,Speciality or practice"></div>
+              <div class="input01"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Location"></div>
+              <div class="Search-btn"><Button>Search</Button></div>
+            </div>
+            <div class="current-location"><div class="empty"></div><div class="btn"><button>Use current location</button></div></div>
+             </div>
+            </div>
+           </div>
+        </div>
+        <div class="description">
+            <div class="desc-left">
+                <div class="icons">
+                    <div class="bg"><i class="fa-regular fa-hospital"></i></div>
+                    <div class="text"><p>Our Hospitals</p></div>
+                </div>
+                <div class="icons">
+                    <div class="bg"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="text"><p>Find a Provider</p></div>
+                </div>
+                <div class="icons">
+                    <div class="bg"><i class="fa-solid fa-user"></i></div>
+                    <div class="text"><p>MyCenturaHealth</p></div>
+                </div>
+            </div>
+            <div class="desc-right">
+                <div class="icons">
+                    <div class="bg"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <div class="text"><p>Pay Bill Online</p></div>
+                </div>
+                <div class="icons">
+                    <div class="bg"><i class="fa-solid fa-suitcase-medical"></i></div>
+                    <div class="text"><p>Careers</p></div>
+                </div>
+                <div class="icons">
+                    <div class="bg"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <div class="text"><p>Our Hospitals</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
+<script>
+function showMenu(){
+    const navbar=document.querySelector(".header-down");
+    const menuToggle=document.querySelector(".toggle-menu");
+    navbar.classList.toggle('active');
+    menuToggle.innerHTML=navbar.classList.contains('active')?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'
+}
+function hideMenu(){
+     const navbar=document.querySelector(".header-down");
+    const menuToggle=document.querySelector(".toggle-menu");
+    navbar.classList.remove('active');
+     menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>'
+}
+</script>
