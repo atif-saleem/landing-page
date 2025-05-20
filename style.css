@@ -41,7 +41,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 25px 14px 14px;
+  padding: 14px 14px 14px 14px;
 }
 .logo i {
   font-size: 40px;
@@ -58,7 +58,7 @@ main {
   justify-content: space-between;
 }
 ul {
-  width: 60%;
+  width: 83%;
   display: flex;
   gap: 25px;
   align-items: center;
@@ -72,8 +72,8 @@ li {
 
 }
 ul .bolds {
-  font-size: 17px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 700;
 }
 .hero-section {
   width: 100%;
