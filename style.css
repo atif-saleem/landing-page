@@ -182,7 +182,7 @@ ul .bolds {
 }
 .description {
   width: 100%;
-  padding: 60px 50px;
+  padding: 60px 50px 20px 50px;
   background-color: rgb(247, 246, 245);
   display: flex;
 }
