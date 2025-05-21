@@ -58,7 +58,7 @@ main {
   justify-content: space-between;
 }
 ul {
-  width: 83%;
+  width: 57%;
   display: flex;
   gap: 25px;
   align-items: center;
@@ -110,7 +110,7 @@ ul .bolds {
 }
 .hero-down-header {
   width: 100%;
-  background-color: #56555b;
+  background-color: rgb(86, 85, 91);
   margin-bottom: 10px;
 }
 .hero-down-deader .hero {
@@ -149,7 +149,7 @@ ul .bolds {
   position: relative;
 }
 .input01 i {
-  color: #661e1e;
+  color: rgb(86, 85, 91);
   margin-right: 4px;
   position: absolute;
   top: 17px;
@@ -222,6 +222,8 @@ outline: none;
   flex-direction: column;
   padding: 14px 0px;
   background-color: #fff;
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
 }
 .bg {
   height: 50px;
@@ -240,6 +242,7 @@ outline: none;
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 600;
+  text-align: center;
 }
 .desc-right {
   width: 50%;
@@ -256,8 +259,9 @@ outline: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0px;
     padding: 0px;
+    height: 54px;
   }
 
   .logo i {
@@ -285,6 +289,7 @@ outline: none;
     position: absolute;
     top: 100px;
     right: 4px;
+    padding: 20px;
   }
   .hero-content {
     padding: 30px 10px;
@@ -292,7 +297,7 @@ outline: none;
   .hero-content .hero-upper {
     width: 100%;
 
-    padding: 2px;
+    padding: 5px;
   }
   .hero-upper h2 {
     font-size: 20px;
@@ -302,6 +307,7 @@ outline: none;
   }
   .hero button {
     padding: 8px 9px;
+    font-size: 12px;
   }
   .hero-down-content01 {
     flex-direction: column;
@@ -329,13 +335,25 @@ outline: none;
     width: 100%;
     padding-right: 0px;
     margin-bottom: 8px;
+    gap: 3%;
   }
   .desc-right {
     width: 100%;
     padding-left: 0px;
     margin-top: 8px;
+    gap: 3%;
   }
+  .nav-upper{
+padding-right: 0px;
 }
+
+.Search-btn button {
+  padding: 10px 42px;
+}
+
+}
+
+
 @media screen and (min-width: 820px) and (max-width: 1200px) {
   .header {
     padding: 20px;
@@ -359,6 +377,7 @@ outline: none;
     position: absolute;
     top: 100px;
     right: 4px;
+    padding: 20px;
   }
   .hero-content .hero-upper {
     width: 79%;
@@ -373,6 +392,9 @@ outline: none;
     width: 100%;
     margin-top: 10px;
   }
+  .Search-btn button {
+  padding: 15px 75px;
+}
   .current-location button {
     position: absolute;
     top: 117px;
