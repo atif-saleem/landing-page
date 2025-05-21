@@ -57,12 +57,13 @@ main {
   color: #57565c;
   justify-content: space-between;
 }
-ul {
+.header-down ul {
   width: 57%;
   display: flex;
   gap: 25px;
   align-items: center;
   list-style: none;
+  justify-content: flex-end;
 }
 li {
   font-size: 14px;
@@ -78,6 +79,8 @@ ul .bolds {
 .hero-section {
   width: 100%;
   background-image: url(bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -127,6 +130,14 @@ ul .bolds {
   font-size: 16px;
   cursor: pointer;
 }
+.hero-down-header ul{
+    width: 100%;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+  justify-content: flex-start;
+}
 .hero .bg-white button {
   background-color: #fff;
   color: rgb(30, 141, 214);
@@ -152,7 +163,7 @@ ul .bolds {
   color: rgb(86, 85, 91);
   margin-right: 4px;
   position: absolute;
-  top: 17px;
+  top: 14px;
   left: 3px;
   font-size: 18px;
   font-weight: 900;
@@ -173,6 +184,7 @@ outline: none;
   width: 20%;
 }
 .Search-btn button {
+  color: hsl(250deg 3.41% 34.51%);
   border: none;
   padding: 15px 75px;
   border-radius: 25px;
@@ -304,6 +316,9 @@ outline: none;
   }
   .hero-upper p {
     font-size: 14px;
+  }
+  .hero-down-header{
+    width: 100%;
   }
   .hero button {
     padding: 8px 9px;
